@@ -15,6 +15,28 @@ export type OptionType = {
 	optionClassName?: string;
 };
 
+export type TAppliedStyles = {
+	fontFamily: OptionType;
+	fontSize: OptionType;
+	fontColor: OptionType;
+	containerWidth: OptionType;
+	bgColor: OptionType;
+};
+
+export type TFormState = {
+	isOpen: boolean;
+	fontFamily: OptionType;
+	fontSize: OptionType;
+	fontColor: OptionType;
+	containerWidth: OptionType;
+	bgColor: OptionType;
+};
+
+export type TArticleParamsFormProps = {
+	appliedStyles: TAppliedStyles;
+	setAppliedStyles: (styles: TAppliedStyles) => void;
+};
+
 export const fontFamilyOptions: OptionType[] & {
 	optionClassName?: FontFamiliesClasses;
 } = [
